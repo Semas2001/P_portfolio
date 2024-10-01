@@ -40,7 +40,7 @@ const Hero = () => {
                 {currentRoute === '/' && <p>Your developer for a futuristic future</p>}
                 </div>
                 {currentRoute === '/' &&
-                    <a href= './projects/'>
+                    <a href= './projects'>
                     <MButton  
                         title="Projects"
                         icon={<FaLocationArrow/>}

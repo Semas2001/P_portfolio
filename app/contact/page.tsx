@@ -7,7 +7,7 @@ import { FaLocationArrow, FaHome, FaProjectDiagram, FaMailBulk } from 'react-ico
 import Footer from '@/components/footer';
 import MButton from '@/components/ui/MButton';
 
-const projectPage = () => {
+const ContactPage = () => {
   const router = useRouter(); // Initialize the router
   const dockItems = [
     {
@@ -92,4 +92,4 @@ const projectPage = () => {
   );
 };
 
-export default projectPage;
+export default ContactPage;

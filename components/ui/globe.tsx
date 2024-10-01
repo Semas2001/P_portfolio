@@ -224,9 +224,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
   }, [globeRef.current, globeData]);
 
   return (
-    <>
+    <div>
       <threeGlobe ref={globeRef} />
-    </>
+    </div>
   );
 }
 

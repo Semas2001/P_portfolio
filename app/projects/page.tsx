@@ -6,7 +6,7 @@ import { FloatingDock } from '@/components/ui/floating-dock'
 import { FaHome, FaProjectDiagram, FaMailBulk } from 'react-icons/fa'
 import Footer from '@/components/footer'
 
-const projectPage = () => {
+const ProjectPage = () => {
   const dockItems = [
     {
       title: 'Home',      
@@ -25,7 +25,7 @@ const projectPage = () => {
     },
   ];
   return (
-    <div className='relative bg-black-100 flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5'>
+    <div className='h-screen relative flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5'>
       <div className='h-auto w-full xl:px-20 lg:px-20 sm:px-10'>
       <FloatingDock items={dockItems} desktopClassName='z-30' mobileClassName='z-30 relative top-10 fixed'/>
       <Hero></Hero>
@@ -37,4 +37,4 @@ const projectPage = () => {
   )
 }
 
-export default projectPage
+export default ProjectPage

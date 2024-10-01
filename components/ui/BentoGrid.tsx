@@ -96,8 +96,6 @@ export const BentoGridItem = ({
                 <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
                     {title}
                 </div>
-            {id === 2 && <GlobeDemo/>
-            }
 
             {id === 3 &&(
                 <div className="flex gap-1 lg:gap-4 w-fit absolute -right-3">
