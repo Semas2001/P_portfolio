@@ -1,12 +1,12 @@
 'use client'
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
-import { GlobeDemo } from "./gridGlobe";
 import { useState } from "react";
 import animationData from '@/data/confetti.json'
 import Lottie from "react-lottie";
 import Image from "next/image";
 import MButton from "./MButton";
+import { Link } from "lucide-react";
 
 export const BentoGrid = ({
   className,
@@ -132,9 +132,9 @@ export const BentoGridItem = ({
                         }
                     }}/>
                 </div>
-                <a href="/contact">
+                <Link href="/contact">
                 <MButton title={"Contact Me"} icon={undefined} position={"left"} otherClasses="!bg-[#161a31]"/>
-                </a>
+                </Link>
             </div>
             
         )}

@@ -100,6 +100,6 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
-    link:"www.linkedin.com/in/semas-armonaitis-563102175"
+    link:"https://linkedin.com/in/semas-armonaitis-563102175"
   },
 ];

@@ -33,7 +33,7 @@ const Projects = () => {
                 <div className='relative w-full h-full lg:rounded-3xl bg-[#13162d]'>
                   <Image 
                     src='/bg.png' 
-                    alt='Background' 
+                    alt='/bg.png' 
                     layout='fill' 
                     className='object-cover rounded-3xl' 
                     priority 

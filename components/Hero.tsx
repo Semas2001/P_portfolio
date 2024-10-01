@@ -5,6 +5,7 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MButton from './ui/MButton'
 import { FaLocationArrow } from 'react-icons/fa'
 import { usePathname } from 'next/navigation';
+import { Link } from 'lucide-react'
 
 
 const Hero = () => {
@@ -40,12 +41,12 @@ const Hero = () => {
                 {currentRoute === '/' && <p>Your developer for a futuristic future</p>}
                 </div>
                 {currentRoute === '/' &&
-                    <a href= './projects'>
+                    <Link href= './projects'>
                     <MButton  
                         title="Projects"
                         icon={<FaLocationArrow/>}
                         position='right'></MButton>
-                    </a> }
+                    </Link> }
         
             </div>
     </div>

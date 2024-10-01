@@ -8,7 +8,7 @@ import Footer from '@/components/footer';
 import MButton from '@/components/ui/MButton';
 
 const ContactPage = () => {
-  const router = useRouter(); // Initialize the router
+  const router = useRouter();
   const dockItems = [
     {
       title: 'Home',
