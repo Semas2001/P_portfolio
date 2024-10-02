@@ -23,16 +23,18 @@ const Footer = () => {
         </p>
 
         <div className='flex items-center gap-6 opacity-30'>
-          {socialMedia.map((profile) => (
+        {socialMedia.map((profile) => (
             <a
               key={profile.id}
               href={profile.link}
-              rel='noopener noreferrer'
-              className='transition-transform hover:scale-110'
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visit my ${profile.link.includes('github') ? 'GitHub' : 'LinkedIn'} profile`}
+              className='transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-300'
             >
               <Image
                 src={profile.img}
-                alt={profile.img}
+                alt={`Icon for ${profile.link.includes('github') ? 'GitHub' : 'LinkedIn'}`}
                 width={20}
                 height={20}
                 className='object-contain'

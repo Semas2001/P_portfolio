@@ -59,15 +59,15 @@ const CV = () => {
         <motion.div 
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1, transition: { delay: 0.1, duration: 0.4, ease: 'easeIn' } }}
-            className='relative flex justify-center xl:py-0 xl:min-h-[1000px] lg:min-h-[900px]'
+            className='relative flex justify-center xl:py-0 xl:min-h-[1000px] lg:min-h-[900px] min-h-[1050px]'
         >
             <div className='container mx-auto'>
                 <Tabs
                     tabs={[
                         { title: 'About Me', value: 'about', content: (
-                            <div className='flex flex-col gap-[30px] h-[700px] text-center xl:text-left bg-[#10132e] p-6 rounded-xl'>
-                                <h1 className='text-4xl font-bold pb-5'>{about.title}</h1>
-                                <p className='max-w-[1000px] text-white/60 mx-auto pb-10 xl:mx=0'>{about.des}</p>
+                            <div className='flex flex-col gap-[30px] xl:h-[700px] h-[900px] text-center xl:text-left bg-[#10132e] p-6 rounded-xl'>
+                                <h1 className='xl:text-4xl  text-2xl font-bold pb-5'>{about.title}</h1>
+                                <p className='max-w-[1000px] xl:text-lg text-sm text-white/60 mx-auto pb-10 xl:mx=0'>{about.des}</p>
                                 <ul className='grid grid-cols-1 xl:grid-cols-1 xl:px-20 gap-y-6 max-w-[620px] mx-auto xl:mx-0'>
                                     {about.info.map((item, index) => (
                                         <li key={index} className='flex items-start justify-start xl:justify-start gap-4'>
@@ -79,8 +79,8 @@ const CV = () => {
                             </div>
                         )},
                         { title: 'Experience', value: 'experience', content: (
-                            <div className='flex flex-col gap-[30px] h-[700px] text-center xl:text-left bg-[#10132e] p-6 rounded-xl'>
-                                <h1 className='text-4xl font-bold pb-5'>{experience.title}</h1>
+                            <div className='flex flex-col gap-[30px] xl:h-[700px] h-[900px] text-center xl:text-left bg-[#10132e] p-6 rounded-xl'>
+                                <h1 className='xl:text-4xl text-2xl font-bold pb-5'>{experience.title}</h1>
                                 <p className='max-w-[600px] text-white/60 mx-auto pb-10 xl:mx=0'>{experience.des}</p>
                                 <ScrollArea className='h-[400px]'>
                                     <ul className='grid grid-cols-1 xl:px-20 lg:grid-cols-2 gap-[30px]'>
@@ -108,8 +108,8 @@ const CV = () => {
                             </div>
                         )},
                         { title: 'Education', value: 'education', content: (
-                            <div className='flex flex-col gap-[30px] h-[700px] text-center xl:text-left bg-[#10132e] p-6 rounded-xl'>
-                                <h1 className='text-4xl font-bold pb-5'>{education.title}</h1>
+                            <div className='flex flex-col gap-[30px] xl:h-[700px] h-[900px] text-center xl:text-left bg-[#10132e] p-6 rounded-xl'>
+                                <h1 className='xl:text-4xl text-2xl font-bold pb-5'>{education.title}</h1>
                                 <p className='max-w-[600px] text-white/60 mx-auto pb-10 xl:mx=0'>{education.des}</p>
                                 <ScrollArea className='h-[400px]'>
                                     <ul className='grid grid-cols-1 xl:px-20 lg:grid-cols-2 gap-[30px]'>
@@ -137,9 +137,9 @@ const CV = () => {
                             </div>
                         )},
                         { title: 'Skills', value: 'skills', content: (
-                            <div className='relative flex flex-col gap-[30px] h-[700px] text-center xl:text-left bg-[#10132e] p-6 rounded-xl'>
+                            <div className='relative flex flex-col gap-[30px] xl:h-[700px] h-[900px] text-center xl:text-left bg-[#10132e] p-6 rounded-xl'>
                                 <div className='flex flex-col gap-[30px]'>
-                                    <h1 className='text-4xl font-bold pb-5'>{skills.title}</h1>
+                                    <h1 className='xl:text-4xl text-2xl font-bold pb-5'>{skills.title}</h1>
                                     <p className='max-w-[600px] text-white/60 mx-auto pb-10 xl:mx=0'>{skills.des}</p>
                                 </div>
                                 <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px] absolute bottom-0 left-0 right-0 p-6'>

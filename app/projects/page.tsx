@@ -1,17 +1,17 @@
-'use client'
-import Hero from '@/components/Hero'
-import React from 'react'
-import Projects from './projects'
-import { FloatingDock } from '@/components/ui/floating-dock'
-import { FaHome, FaProjectDiagram, FaMailBulk } from 'react-icons/fa'
-import Footer from '@/components/footer'
+'use client';
+import Hero from '@/components/Hero';
+import React from 'react';
+import Projects from '../../components/projects';
+import { FloatingDock } from '@/components/ui/floating-dock';
+import { FaHome, FaProjectDiagram, FaMailBulk } from 'react-icons/fa';
+import Footer from '@/components/footer';
 
 const ProjectPage = () => {
   const dockItems = [
     {
-      title: 'Home',      
-      icon: <FaHome />,   
-      href: '/',          
+      title: 'Home',
+      icon: <FaHome />,
+      href: '/',
     },
     {
       title: 'Projects',
@@ -24,17 +24,18 @@ const ProjectPage = () => {
       href: '/contact',
     },
   ];
+
   return (
-    <div className='h-screen relative flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5'>
-      <div className='h-auto w-full xl:px-20 lg:px-20 sm:px-10'>
-      <FloatingDock items={dockItems} desktopClassName='z-30' mobileClassName='z-30 relative top-10 fixed'/>
-      <Hero></Hero>
-      <Projects/>
-      <Footer></Footer>
-      <br></br>
+    <div className='h-screen relative flex justify-center items-center flex-col overflow-y-auto mx-auto sm:px-10 px-5'>
+      <div className='h-auto w-full xl:px-20 lg:px-20 sm:px-10 overflow-y-auto'> {/* Allow vertical scrolling */}
+        <FloatingDock items={dockItems} desktopClassName='z-30' mobileClassName='z-30 relative top-10 fixed' />
+        <Hero />
+        <Projects />
+        <Footer />
+        <br />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectPage
+export default ProjectPage;
