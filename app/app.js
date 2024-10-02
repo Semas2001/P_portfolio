@@ -1,4 +1,5 @@
-// pages/_app.js
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import * as Sentry from "@sentry/nextjs";
 // Sentry Initialization
 Sentry.init({
