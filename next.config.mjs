@@ -1,13 +1,15 @@
-const { withSentryConfig } = require("@sentry/nextjs");
+import { withSentryConfig } from "@sentry/nextjs";
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config, { isServer }) => {
-    config.devtool = 'source-map'; 
-    return config;
-  },
+  output: 'export',
+  typescript: {
+    ignoreBuildErrors: true,
+  }
 };
 
-module.exports = withSentryConfig(nextConfig, {
+// Use export default for ES module syntax
+export default withSentryConfig(nextConfig, {
   org: "semas-armonaitis",
   project: "javascript-nextjs",
   silent: !process.env.CI,

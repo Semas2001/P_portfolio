@@ -24,7 +24,7 @@ const Projects = () => {
   }, [projectsData]);
 
   return (
-    <main className='py-0'>
+    <div className='py-0'>
       <div className='flex flex-wrap items-center justify-center p-2 pb-20 gap-20 mt-10'>
         {projectsData.map(({ id, title, des, img, iconLists, link }) => (
           <div
@@ -33,18 +33,15 @@ const Projects = () => {
             <PinContainer title={link} href={link}>
               <div className='relative flex items-center justify-center h-[15vh] xl:w-[25rem] w-80 overflow-hidden lg:rounded-3xl'>
                 <div className='absolute w-full h-full bg-[#13162d]'>
-                  <Image 
+                  <img
                     src='/bg.png' 
                     alt='Background image' 
-                    fill 
-                    className='object-cover rounded-3xl' 
-                    priority 
+                    className='object-cover rounded-3xl fill-inherit' 
                   />
                 </div>
-                <Image
+                <img
                   src={img}
                   alt={title}
-                  fill
                   className='absolute top-0 rounded-3xl'
                   style={{
                     transform: 'scaleY(1.1) rotate(3deg)', 
@@ -76,7 +73,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
-    </main>
+    </div>
   );
 };
 

@@ -26,7 +26,7 @@ const ProjectPage = () => {
   ];
 
   return (
-    <div className='h-screen relative flex justify-center items-center flex-col overflow-y-auto mx-auto sm:px-10 px-5'>
+    <main className='h-screen relative flex justify-center items-center flex-col overflow-y-auto mx-auto sm:px-10 px-5'>
       <div className='h-auto w-full xl:px-20 lg:px-20 sm:px-10 overflow-y-auto'> {/* Allow vertical scrolling */}
         <FloatingDock items={dockItems} desktopClassName='z-30' mobileClassName='z-30 relative top-10 fixed' />
         <Hero />
@@ -34,7 +34,7 @@ const ProjectPage = () => {
         <Footer />
         <br />
       </div>
-    </div>
+    </main>
   );
 };
 
