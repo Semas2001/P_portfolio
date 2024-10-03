@@ -1,11 +1,14 @@
 const { withSentryConfig } = require("@sentry/nextjs");
 
 const nextConfig = {
-  // Enable static export
-  output: 'export',
+  webpack: (config, { isServer }) => {
+
+    config.devtool = 'source-map';
+    return config;
+  },
 };
 
-// Combine the Sentry configuration with your Next.js configuration
+
 module.exports = withSentryConfig(nextConfig, {
   org: "semas-armonaitis",
   project: "javascript-nextjs",
