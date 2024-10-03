@@ -2,10 +2,13 @@ const { withSentryConfig } = require("@sentry/nextjs");
 
 const nextConfig = {
   webpack: (config, { isServer }) => {
+    
 
     config.devtool = 'source-map';
     return config;
+    
   },
+  output: 'export',
 };
 
 
