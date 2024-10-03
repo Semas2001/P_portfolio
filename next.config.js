@@ -1,15 +1,16 @@
 const { withSentryConfig } = require("@sentry/nextjs");
 
 const nextConfig = {
-  webpack: (config, { isServer }) => {
-    
-
-    config.devtool = 'source-map';
-    return config;
-    
-  },
   output: 'export',
+  reactStrictMode: true,
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.devtool = process.env.NODE_ENV === 'development' ? 'source-map' : false;
+    }
+    return config;
+  },
 };
+
 
 
 module.exports = withSentryConfig(nextConfig, {
