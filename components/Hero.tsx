@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
 
           {currentRoute === '/' && (
-            <Link href='/projects' passHref>
+            <Link href='#projects' passHref>
               <MButton  
                 title="Projects"
                 icon={<FaLocationArrow />}

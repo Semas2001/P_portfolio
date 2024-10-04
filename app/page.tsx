@@ -5,6 +5,8 @@ import { FloatingDock } from '@/components/ui/floating-dock'
 import { FaHome, FaProjectDiagram, FaMailBulk } from 'react-icons/fa'
 import Footer from '@/components/footer'
 import CV from '@/components/cv-outline'
+import Projects from '@/components/projects'
+import FloatingButton from '@/components/ui/floating-button'
 
 export default function Home() {
   const dockItems = [
@@ -16,7 +18,7 @@ export default function Home() {
     {
       title: 'Projects',
       icon: <FaProjectDiagram />,
-      href: '/projects',
+      href: '#projects',
     },
     {
       title: 'Contact',
@@ -31,8 +33,10 @@ export default function Home() {
       <FloatingDock items={dockItems} desktopClassName='z-30' mobileClassName='z-30 relative top-10 fixed'/>  
         <Hero />
         <Grid />
-        <CV/> 
+        <CV/>
+        <Projects/>
         <Footer/>
+        <FloatingButton/>
              
       </div>
     </main>

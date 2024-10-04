@@ -1,7 +1,7 @@
 'use client';
 import Hero from '@/components/Hero';
 import React from 'react';
-import { useRouter } from 'next/navigation'; // Import useRouter for navigation
+import { useRouter } from 'next/navigation';
 import { FloatingDock } from '@/components/ui/floating-dock';
 import { FaLocationArrow, FaHome, FaProjectDiagram, FaMailBulk } from 'react-icons/fa';
 import Footer from '@/components/footer';
@@ -29,7 +29,7 @@ const ContactPage = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); 
-
+  
     const formData = new FormData(e.currentTarget);
     const response = await fetch('https://formspree.io/f/xeojwvdy', {
       method: 'POST',
@@ -38,15 +38,17 @@ const ContactPage = () => {
         Accept: 'application/json',
       },
     });
-
+  
     if (response.ok) {
       alert('Message sent successfully!');
       e.currentTarget.reset();
+  
       router.push('/'); 
     } else {
       alert('There was a problem sending your message.');
     }
   };
+  
 
 
   return (

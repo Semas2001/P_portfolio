@@ -59,7 +59,7 @@ const CV = () => {
         <motion.div 
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1, transition: { delay: 0.1, duration: 0.4, ease: 'easeIn' } }}
-            className='relative flex justify-center xl:py-0 xl:min-h-[1000px] lg:min-h-[900px] min-h-[1050px]'
+            className='relative flex justify-center xl:py-0 xl:min-h-[1000px] lg:min-h-[1200px] min-h-[1050px]'
         >
             <div className='container mx-auto'>
                 <Tabs
