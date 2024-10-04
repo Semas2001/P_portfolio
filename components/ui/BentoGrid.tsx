@@ -4,10 +4,8 @@ import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import { useState } from "react";
 import animationData from '@/data/confetti.json';
 import Lottie from "react-lottie";
-import Image from "next/image";
 import MButton from "./MButton";
 import Link from "next/link";
-import { GlobeDemo } from "./gridGlobe";
 
 export const BentoGrid = ({
   className,
@@ -117,7 +115,6 @@ export const BentoGridItem = ({
               </div>
             </div>
           )}
-          {id === 2 && <GlobeDemo/>}
           {id === 6 && (
             <div className="mt-5 relative">
               <div className="absolute -bottom-5 right-0">
