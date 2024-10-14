@@ -15,13 +15,13 @@ const about = {
         { fieldName: 'Phone', FieldValue: "+447311080700" },
         { fieldName: 'Email', FieldValue: "semasarmonaitis@gmail.com" },
         { fieldName: 'Available?', FieldValue: "Available to start immediately" },
-        { fieldName: 'Languages', FieldValue: 'English (fluent), Lithuanian (native), Russian (Conversational)' },
+        { fieldName: 'Languages', FieldValue: 'English (native), Lithuanian (fluent), Russian (Conversational)' },
     ]
 };
 
 const experience = {
     title: 'My Experience',
-    des: 'This is my experience, I know it might not be much but it will become populated soon!',
+    des: 'I have extensive experience in IT support and network infrastructure management, ensuring seamless technology operations across various environments. I have successfully set up and maintained complex IT systems, including configuring patch panels, mounting CCTV systems, and establishing secure workstations.My expertise includes installing and maintaining operating systems, deploying security protocols, and troubleshooting hardware and software issues efficiently. I provide first-line and on-site support, focusing on minimizing downtime and improving productivity.I am adept at managing IT projects, following technical documentation, and ensuring compliance with security standards. Whether working independently or as part of a team, I am committed to delivering reliable IT solutions tailored to meet business needs.',
     items: [
         { company: 'Amana Trust', position: 'IT Worker', duration: '2023 May - 2023 Aug ', desc: '' },
     ]
@@ -29,7 +29,7 @@ const experience = {
 
 const education = {
     title: 'My Education',
-    des: 'I first got interested in computer science before Reading College. However, I managed to learn a lot whilst I was in college...',
+    des: 'I graduated with First Class Honours in Computer Science from the University of East London, specializing in software engineering and web development. During my studies, I enhanced my skills in programming languages such as Python, Java, and JavaScript through hands-on projects. As the head student in the Computer Science department, I developed leadership and mentoring abilities while working on my dissertation focused on mobile financing applications for SMEs. These experiences sharpened my coding and problem-solving skills. Previously, I studied at Liverpool Hope University, where I created a School Resources Website that improved accessibility for educational materials, gaining practical experience in database management and user interface design. My foundational knowledge was further strengthened by earning a National Extended Diploma in Computer Science from Reading College. Overall, these experiences equipped me with a diverse skill set in project management, collaboration, and adaptability in the tech landscape, fueling my passion for continuous learning and innovation in computer science.',
     items: [
         { school: 'Reading College', course: 'National Extended Diploma in Computer Science', duration: 'Sep 2018 - Jun 2020', grade: 'DMM' },
         { school: 'Liverpool Hope University', course: 'Computer Science Bachelor Degree', duration: 'Oct 2021 - May 2023', grade: '2:1' },
@@ -66,13 +66,13 @@ const CV = () => {
                     tabs={[
                         { title: 'About Me', value: 'about', content: (
                             <div className='flex flex-col gap-[30px] xl:h-[700px] h-[900px] text-center xl:text-left bg-[#10132e] p-6 rounded-xl'>
-                                <h1 className='xl:text-4xl  text-2xl font-bold pb-5'>{about.title}</h1>
+                                <h1 className='lg:text-4xl  text-2xl font-bold pb-5'>{about.title}</h1>
                                 <p className='max-w-[1000px] xl:text-lg text-sm text-white/60 mx-auto pb-10 xl:mx=0'>{about.des}</p>
-                                <ul className='grid grid-cols-1 xl:grid-cols-1 xl:px-20 gap-y-6 max-w-[620px] mx-auto xl:mx-0'>
+                                <ul className='grid grid-cols-1 xl:grid-cols-1 pr-5 xl:px-20 gap-y-3 max-w-[620px] mx-0 xl:mx-0'>
                                     {about.info.map((item, index) => (
-                                        <li key={index} className='flex items-start justify-start xl:justify-start gap-4'>
-                                            <span className='text-purple text-md'>{item.fieldName}</span>
-                                            <span className='text-lg'>{item.FieldValue}</span>
+                                        <li key={index} className='flex items-start text-sm justify-start xl:justify-start gap-4'>
+                                            <span className='text-purple text-sm md:text-md'>{item.fieldName}</span>
+                                            <span className='text-sm pr-10 md:text-lg'>{item.FieldValue}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -80,8 +80,8 @@ const CV = () => {
                         )},
                         { title: 'Experience', value: 'experience', content: (
                             <div className='flex flex-col gap-[30px] xl:h-[700px] h-[900px] text-center xl:text-left bg-[#10132e] p-6 rounded-xl'>
-                                <h1 className='xl:text-4xl text-2xl font-bold pb-5'>{experience.title}</h1>
-                                <p className='max-w-[600px] text-white/60 mx-auto pb-10 xl:mx=0'>{experience.des}</p>
+                                <h1 className='lg:text-4xl text-2xl font-bold pb-5'>{experience.title}</h1>
+                                <p className='max-w-[1000px] xl:text-lg text-sm text-white/60 mx-auto pb-10 xl:mx=0'>{experience.des}</p>
                                 <ScrollArea className='h-[400px]'>
                                     <ul className='grid grid-cols-1 xl:px-20 lg:grid-cols-2 gap-[30px]'>
                                         {experience.items.map((item, index) => (
@@ -109,8 +109,8 @@ const CV = () => {
                         )},
                         { title: 'Education', value: 'education', content: (
                             <div className='flex flex-col gap-[30px] xl:h-[700px] h-[900px] text-center xl:text-left bg-[#10132e] p-6 rounded-xl'>
-                                <h1 className='xl:text-4xl text-2xl font-bold pb-5'>{education.title}</h1>
-                                <p className='max-w-[600px] text-white/60 mx-auto pb-10 xl:mx=0'>{education.des}</p>
+                                <h1 className='lg:text-4xl text-2xl font-bold pb-5'>{education.title}</h1>
+                                <p className='max-w-[1000px] xl:text-lg text-sm text-white/60 mx-auto pb-10 xl:mx=0'>{education.des}</p>
                                 <ScrollArea className='h-[400px]'>
                                     <ul className='grid grid-cols-1 xl:px-20 lg:grid-cols-2 gap-[30px]'>
                                         {education.items.map((items, index) => (
@@ -137,31 +137,35 @@ const CV = () => {
                             </div>
                         )},
                         { title: 'Skills', value: 'skills', content: (
-                            <div className='relative flex flex-col gap-[30px] xl:h-[700px] h-[900px] text-center xl:text-left bg-[#10132e] p-6 rounded-xl'>
-                                <div className='flex flex-col gap-[30px]'>
-                                    <h1 className='xl:text-4xl text-2xl font-bold pb-5'>{skills.title}</h1>
-                                    <p className='max-w-[600px] text-white/60 mx-auto pb-10 xl:mx=0'>{skills.des}</p>
+                            <div id='skills' className='relative flex flex-col xl:h-[700px] h-[900px] text-center xl:text-left bg-[#10132e] pt-4 pb-6 rounded-xl'> {/* Adjust padding */}
+                                <div className='flex flex-col'>
+                                    <h1 className='lg:text-4xl text-2xl font-bold'>{skills.title}</h1>
                                 </div>
-                                <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px] absolute bottom-0 left-0 right-0 p-6'>
-                                    {skills.skillList.map((skill, index) => (
-                                        <li key={index}>
-                                            <TooltipProvider delayDuration={100}>
-                                                <Tooltip>
-                                                    <TooltipTrigger className='w-full h-[150px] rounded-xl flex justify-center items-center group'>
-                                                        <div className='text-6xl group-hover:text-accent transition-all duration-300'>
-                                                            {skill.icon}
-                                                        </div>
-                                                    </TooltipTrigger>
-                                                    <TooltipContent>
-                                                        <p>{skill.name}</p>
-                                                    </TooltipContent>
-                                                </Tooltip>
-                                            </TooltipProvider>
-                                        </li>
-                                    ))}
-                                </ul>
+                                <div className='flex flex-col py-10'>
+                                    <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 lg:gap-[30px] p-6'>
+                                        {skills.skillList.map((skill, index) => (
+                                            <li key={index}>
+                                                <TooltipProvider delayDuration={100}>
+                                                    <Tooltip>
+                                                        <TooltipTrigger className='w-full h-[150px] rounded-xl flex justify-center items-center group'>
+                                                            <div className='text-6xl group-hover:text-accent transition-all duration-300'>
+                                                                {skill.icon}
+                                                            </div>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <p>{skill.name}</p>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
                             </div>
                         )},
+                        
+                        
                         
                     ]}
                 />

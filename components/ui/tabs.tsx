@@ -52,7 +52,10 @@ export const Tabs = ({
             }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
-            className={cn("relative px-4 py-2 rounded-full", tabClassName)}
+            className={cn(
+              "relative px-2 py-1 rounded-full sm:px-4 sm:py-2", // Adjust padding for mobile devices
+              tabClassName
+            )}
             style={{
               transformStyle: "preserve-3d",
             }}
@@ -68,7 +71,11 @@ export const Tabs = ({
               />
             )}
 
-            <span className="relative block text-black dark:text-white">
+            <span
+              className={cn(
+                "relative block text-black dark:text-white text-xs sm:text-base"
+              )}
+            >
               {tab.title}
             </span>
           </button>
@@ -79,7 +86,7 @@ export const Tabs = ({
         active={active}
         key={active.value}
         hovering={hovering}
-        className={cn("mt-32", contentClassName)}
+        className={cn("mt-8 sm:mt-32", contentClassName)}
       />
     </div>
   );
