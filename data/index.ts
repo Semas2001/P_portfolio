@@ -86,7 +86,7 @@ export const projects = [
     des: "First website I created to show off my portfolio",
     img: "/pweb.png",
     iconLists: ["/html.svg","/vscode.svg"],
-    link: "https://github.com/Semas2001/SemasA",
+    link: "https://semas2001.github.io/Personal_Portfolio_1.0/index.html",
   },
 ];
 
