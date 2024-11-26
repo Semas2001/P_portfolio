@@ -88,6 +88,14 @@ export const projects = [
     iconLists: ["/html.svg","/vscode.svg"],
     link: "https://semas2001.github.io/Personal_Portfolio_1.0/index.html",
   },
+  {
+    id: 4,
+    title: "Armo Building Works",
+    des: "A website for a building company that I worked on",
+    img: "/ABW.png",
+    iconLists: ["/wp.svg"],
+    link: "https://armobuildingworks.uk/",
+  },
 ];
 
 

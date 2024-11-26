@@ -40,10 +40,10 @@ const Projects = () => {
         {projectsData.map(({ id, title, des, img, iconLists, link }) => (
           <article
             key={id}
-            className='flex flex-col items-center justify-center xl:min-h-[23.5rem] h-auto md:w-96 w-full z-10'
+            className='flex flex-col items-center justify-center mb-0 lg:mb-10 xl:min-h-[23.5rem] h-auto md:w-96 w-full z-10'
           >
             <PinContainer title={link} href={link}>
-              <div className='relative flex items-center justify-center h-[15vh] xl:w-[25rem] w-80 overflow-hidden lg:rounded-3xl'>
+              <div className='relative flex items-center justify-center  h-[25vh] md:h-[15vh] xl:w-[25rem] w-80 overflow-hidden lg:rounded-3xl'>
                 <div className='absolute w-full h-full bg-[#13162d]'>
                   <img
                     src='/bg.png'
@@ -54,7 +54,7 @@ const Projects = () => {
                 <img
                   src={img}
                   alt={`Image for ${title}`} 
-                  className='absolute top-0 rounded-3xl'
+                  className='absolute top-2 rounded-3xl'
                   style={{
                     transform: 'scaleY(1.1) rotate(3deg)',
                     objectFit: 'contain',
