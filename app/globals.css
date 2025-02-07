@@ -3,6 +3,38 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('/Fonts/metropolis.medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('/Fonts/metropolis.light.otf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('/Fonts/metropolis.bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+
+  strong {
+    font-weight: 700 !important;
+  }
+
+  /* Apply font globally */
+  body {
+    font-family: 'Metropolis';
+  }
+
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -132,5 +164,16 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+
+.group img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.group:hover img {
+  transform: translateY(-2px);
+}
+
+
 
 

@@ -2,7 +2,6 @@
 import Hero from '@/components/Hero';
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { FloatingDock } from '@/components/ui/floating-dock';
 import { FaLocationArrow, FaHome, FaProjectDiagram, FaMailBulk } from 'react-icons/fa';
 import Footer from '@/components/footer';
 import MButton from '@/components/ui/MButton';
@@ -53,7 +52,6 @@ const ContactPage = () => {
 
   return (
     <div className='h-screen relative flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5'>
-      <FloatingDock items={dockItems} desktopClassName='z-10' mobileClassName='z-30 relative top-10 fixed left-5'/>
       <Hero />
       <form 
         className='z-10 flex flex-col gap-6 p-6 rounded-lg shadow-lg w-full max-w-lg'

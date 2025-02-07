@@ -1,20 +1,15 @@
 'use client'
-import { FaHome, FaProjectDiagram, FaMailBulk } from 'react-icons/fa'
+import Image from 'next/image'
 import Footer from '@/components/footer'
 import CV from '@/components/cv-outline'
-import Projects from '@/components/projects'
 import Grid from '@/components/grid'
 import Hero from '@/components/Hero'
-import { FloatingDock } from '@/components/ui/floating-dock'
 import FloatingButton from '@/components/ui/floating-button'
 import { useState, useEffect } from 'react'
+import ScrollSection from '@/components/Journey'
+import ProjectsCopy from '@/components/projects-2.0'
 
 const Home = () => {
-  const dockItems = [
-    { title: 'Home', icon: <FaHome />, href: '/' },
-    { title: 'Projects', icon: <FaProjectDiagram />, href: '#projects' },
-    { title: 'Contact', icon: <FaMailBulk />, href: '/contact' },
-  ];
 
   const [projectVisible, setProjectVisible] = useState(false);
   const [cvVisible, setCvVisible] = useState(false);
@@ -56,29 +51,23 @@ const Home = () => {
   }, []);
 
   return (
-    <main className='relative  bg-black-100 flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5'>
+    <main className=' font-montserrat relative  bg-black flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5'>
+      <div className="h-full w-full dark:bg-black bg-white dark:bg-dot-white/[0.3] bg-dot-black/[0.2] absolute flex items-center justify-center top-0 left-0">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      </div>
       <div className='h-auto w-full xl:px-20 lg:px-20 sm:px-4'>
-        <FloatingDock items={dockItems} desktopClassName='z-30' mobileClassName='z-30 relative top-10 fixed'/> 
+        <Image 
+          src="/icons/SAlogo.png"
+          alt="SA Logo"
+          className="z-30 relative top-10  bg-transparent" 
+          width={70}
+          height={70}
+          />
         <Hero />
-        <div
-          id="projects"
-          className={`mb-20 transition-opacity duration-700 ease-in ${projectVisible ? 'opacity-100' : 'opacity-0'}`}
-        >
-          <Projects />
-        </div>
-        <div
-          id="cv"
-          className={`mt-20 transition-opacity duration-700 ease-in ${cvVisible ? 'opacity-100' : 'opacity-0'}`}
-        >
-          <CV />
-        </div>
-        <div
-          id="grid"
-          className={`transition-opacity duration-700 ease-in ${gridVisible ? 'opacity-100' : 'opacity-0'}`}
-        >
-          <Grid />
-        </div>
-
+        <ProjectsCopy/>
+        <ScrollSection />
+        <CV />
+        <Grid />
         <Footer />
         <FloatingButton />
       </div>

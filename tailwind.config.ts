@@ -33,6 +33,13 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        metropolis: ['Metropolis', ...defaultTheme.fontFamily.sans],
+      },
+      fontWeight: {
+        regular: '400',
+        bold: '700',
+      },
       colors: {
         black: {
           '100': '#000319',
@@ -184,6 +191,7 @@ const config: Config = {
     },
   },
   plugins: [
+    addVariablesForColors,
     require("tailwindcss-animate"),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {

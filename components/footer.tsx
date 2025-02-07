@@ -19,7 +19,7 @@ const Footer = () => {
       {/* Footer content */}
       <div className='flex flex-col justify-center items-center gap-6'>
         <p className='md:text-base text-sm md:font-sm font-light opacity-30'>
-          Copyright © 2024 Semas
+          Copyright © 2025 Semas
         </p>
 
         <div className='flex items-center gap-6 opacity-30'>
